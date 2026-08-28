@@ -1,0 +1,87 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 25%, #102d2b 0%, var(--color-bg) 58%);
+  padding: 1.5rem;
+}
+
+:global([data-theme='light']) .page {
+  background: linear-gradient(160deg, #f0fdf4 0%, #f8fafc 50%, #ecfdf5 100%);
+}
+
+.content {
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.title {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.target {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: 0 0 2rem;
+}
+
+.countdown {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
+}
+
+.countdownLabel {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.countdownValue {
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+.reassurance {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.cancel {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  padding: 0.5rem;
+}
+
+.cancel:hover {
+  color: var(--color-text);
+}

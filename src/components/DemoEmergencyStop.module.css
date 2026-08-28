@@ -1,0 +1,26 @@
+.btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 300;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background: #ef4444;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  background: #dc2626;
+  transform: scale(1.15);
+}
+
+@media (max-width: 480px) {
+  .btn {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+}
